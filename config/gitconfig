@@ -1,0 +1,18 @@
+[user]
+	name = Parv Gupta
+	email = 85178397+guptaparv-rlr@users.noreply.github.com
+
+[includeIf "gitdir:~/gp/"]
+    path = ~/gp/.gitconfig
+
+[includeIf "gitdir:~/rlr/"]
+    path = ~/rlr/.gitconfig
+
+[init]
+    defaultBranch = main
+
+[fetch]
+    prune = true
+
+[status]
+    short = true

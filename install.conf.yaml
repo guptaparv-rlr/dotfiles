@@ -1,0 +1,36 @@
+- clean: ['~']
+
+- create:
+    - $HOME/gp
+    - $HOME/rlr
+
+- link:
+    $HOME/.zprofile: config/zprofile
+    $HOME/.tool-versions: config/tool-versions
+    $HOME/.zshrc: config/zshrc
+    $HOME/.zsh_aliases: config/zsh_aliases
+    $HOME/.gitconfig: config/gitconfig
+
+    $HOME/gp/.gitconfig: config/gp.gitconfig
+    $HOME/rlr/.gitconfig: config/rlr.gitconfig
+    
+    $HOME/.ssh/config:
+        path: config/ssh_config
+        create: true
+
+- shell:
+  - command: brew bundle install
+    description: Installing packages from homebrew
+    stdout: true
+    stderr: true
+  - [git submodule update --init --recursive, Installing submodules]
+  - [chmod +x ~/.dotfiles/ansible/ansible.sh, Make scripts executable]
+  - command: ~/.dotfiles/ansible/ansible.sh
+    description: Invoke Ansible
+    stdout: true
+    stderr: true
+  - [chmod +x ~/.dotfiles/vscode/install.sh, Make scripts executable]
+  - command: ~/.dotfiles/vscode/install.sh
+    description: Invoke VSCode
+    stdout: true
+    stderr: true

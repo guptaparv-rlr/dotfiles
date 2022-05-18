@@ -1,0 +1,38 @@
+# Default branch of the repository
+function get_default_branch() {
+	if git branch | grep -q master; then
+		echo master
+	else
+		echo main
+	fi
+}
+
+# navigation aliases
+alias gp="cd ~/gp"
+alias rlr="cd ~/rlr"
+
+# git
+alias g='git'
+alias ga='git add'
+alias gs='git status'
+
+alias gdel='git branch -D'
+alias gdela='git branch | grep -v $(get_default_branch) | xargs git branch -D'
+
+alias gc='git checkout'
+alias gcb='git checkout -b'
+alias gcom='git checkout $(get_default_branch)'
+alias gcpd='git checkout $(get_default_branch); git pull;'
+
+alias gcmsg='git commit -m'
+
+alias gcl='git clone --recursive'
+
+# azure-cli
+alias azacc='az account set --subscription'
+alias azaks='az aks get-credentials'
+
+# kubernetes
+alias k='kubectl'
+alias kctx='kubectx'
+alias kns='kubens'

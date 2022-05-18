@@ -1,0 +1,15 @@
+## ----- Source Control ----- ##
+Host rlr
+    HostName github.com
+    User git
+    IdentityFile ~/.ssh/rlr
+
+Host gp
+    HostName github.com
+    User git
+    IdentityFile ~/.ssh/gp
+
+Host jenkins
+    HostName 10.69.48.36
+    User parv.gupta
+    IdentityFile ~/.ssh/rlr_bastion

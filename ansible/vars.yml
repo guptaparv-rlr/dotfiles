@@ -1,0 +1,51 @@
+asdf_plugins:
+  - name: kubectl
+    versions:
+      - 1.21.7
+  - name: kubectx
+    versions:
+      - 0.9.4
+  - name: helm
+    versions:
+      - 3.8.2
+  - name: helm-docs
+    versions:
+      - 1.5.0
+  - name: helmfile
+    versions:
+      - 0.132.1
+  - name: vault
+    versions:
+      - 1.9.3
+  - name: terraform
+    versions:
+      - 1.1.5
+  - name: shellcheck
+    versions:
+      - 0.7.2
+  - name: tflint
+    versions:
+      - 0.35.0
+  - name: yq
+    versions:
+      - 4.24.4
+  - name: pre-commit
+    versions:
+      - 2.18.0
+  # - name: nodejs
+  #   versions:
+  #     - 14.17.3
+  # - name: starboard
+  #   versions: 
+  #     - 0.11.0
+  # - name: pluto
+  #   versions:
+  #     - 4.2.0
+
+
+helm_plugins:
+  - https://github.com/databus23/helm-diff
+
+krew_plugins:
+  - df-pv
+  - ktop
